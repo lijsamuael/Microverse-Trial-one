@@ -4,11 +4,82 @@
     <meta charset="UTF-8">
     <title>Fork Me! FCC: Test Suite Template</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
   </head>
 
   <body>
-	  Hello World!
+    <div class="nav-bar">
+     <nav>
+      <img src="data:image/png;base64,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" alt="">
+     </nav>
+    </div>
+	  <h1 class="text-center bg-light" id="title">A survey form</h1>
+    <p id="description" class="container mt-5 ounded-3 rounded  bg-body shadow" style="max-width: 40rem;"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur dolorum id deserunt magni? Amet at fugiat optio eos ipsa numquam iusto perspiciatis, magni quos quibusdam quidem corrupti delectus corporis recusandae! </p>
+    <form action="" id="survery-form" class="container bg-light rounded-3 mb-3 rounded shadow" style="max-width: 40rem;">
+
+      <div class="form-group mt-3">
+        <label for="" class="form-label mt-3" id="name-label">Name</label>
+        <input type="text" class="form-control mt-3" id="name" required>
+      </div>
+
+      <div class="form-group mt-3">
+        <label for="" class="form-label mt-3" id="email-label" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+
+      <div class="form-group mt-3">
+        <label for="" class="form-label mt-3" id="phone-label">Age</label>
+        <input type="number" class="form-control" id="number" required name="number" min="14" max="99">
+      </div>
+
+      <div class="form-group mt-3">
+        <label for="" class="form-label mt-3">Choose a subject</label>
+        <select name="subject" id="cars" class="w-100 mt-3">
+          <option value="volvo">English</option>
+          <option value="saab">Amharic</option>
+          <option value="opel">Sarbian</option>
+          <option value="audi">Geez</option>
+        </select>
+      </div>
+
+      <div class="form-group mt-3">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Radios" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Radios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+            Female
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group mt-3">
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment" id="floatingTextarea2" style="height: 100px"></textarea>
+          <label for="floatingTextarea2">Comments</label>
+        </div>
+      </div>
+
+      <div class="form-group mt-3 mb-3">
+        <button class="btn btn-outline-success mb-3" id="submit">
+          Submit
+        </button>
+      </div>
+      
+
+    </form>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+      function sami() {
+            var em = document.getElementById("email").pattern;
+            document.getElementById("GFG").innerHTML = em;
+        }
+    </script>
 
     <!--
 
@@ -22,6 +93,8 @@
     - The freeCodeCamp Team
 
     -->
+
+    
     <script  src="js/index.js"></script>
   </body>
 </html>
